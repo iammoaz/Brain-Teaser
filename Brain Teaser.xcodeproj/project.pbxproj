@@ -12,6 +12,7 @@
 		41761ABE1E38DBA600401975 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761ABD1E38DBA600401975 /* Choice.swift */; };
 		41761AC11E38DEDE00401975 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC01E38DEDE00401975 /* DataService.swift */; };
 		41761AC31E38E41300401975 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC21E38E41300401975 /* Game.swift */; };
+		41761AC61E39260700401975 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC51E39260700401975 /* ThemeButton.swift */; };
 		41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3B81E37F215008F8764 /* AppDelegate.swift */; };
 		41ACC3BB1E37F215008F8764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3BA1E37F215008F8764 /* ViewController.swift */; };
 		41ACC3BE1E37F215008F8764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41ACC3BC1E37F215008F8764 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		41761ABD1E38DBA600401975 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		41761AC01E38DEDE00401975 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		41761AC21E38E41300401975 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		41761AC51E39260700401975 /* ThemeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		41ACC3B51E37F215008F8764 /* Brain Teaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain Teaser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41ACC3B81E37F215008F8764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41ACC3BA1E37F215008F8764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 				41761AC01E38DEDE00401975 /* DataService.swift */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		41761AC41E3925DA00401975 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				41761AC51E39260700401975 /* ThemeButton.swift */,
+			);
+			name = Design;
 			sourceTree = "<group>";
 		};
 		41ACC3AC1E37F215008F8764 = {
@@ -155,6 +165,7 @@
 		41ACC3CF1E37F269008F8764 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				41761AC41E3925DA00401975 /* Design */,
 			);
 			name = Theme;
 			sourceTree = "<group>";
@@ -238,6 +249,7 @@
 				41ACC3BB1E37F215008F8764 /* ViewController.swift in Sources */,
 				41761ABE1E38DBA600401975 /* Choice.swift in Sources */,
 				41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */,
+				41761AC61E39260700401975 /* ThemeButton.swift in Sources */,
 				41761AC11E38DEDE00401975 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
