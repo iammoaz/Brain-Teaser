@@ -10,6 +10,7 @@
 		41761ABA1E38D9D200401975 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 41761AB91E38D9D200401975 /* data.json */; };
 		41761ABC1E38DB6700401975 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761ABB1E38DB6700401975 /* Question.swift */; };
 		41761ABE1E38DBA600401975 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761ABD1E38DBA600401975 /* Choice.swift */; };
+		41761AC11E38DEDE00401975 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC01E38DEDE00401975 /* DataService.swift */; };
 		41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3B81E37F215008F8764 /* AppDelegate.swift */; };
 		41ACC3BB1E37F215008F8764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3BA1E37F215008F8764 /* ViewController.swift */; };
 		41ACC3BE1E37F215008F8764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41ACC3BC1E37F215008F8764 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		41761AB91E38D9D200401975 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		41761ABB1E38DB6700401975 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		41761ABD1E38DBA600401975 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
+		41761AC01E38DEDE00401975 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		41ACC3B51E37F215008F8764 /* Brain Teaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain Teaser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41ACC3B81E37F215008F8764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41ACC3BA1E37F215008F8764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		41761ABF1E38DECA00401975 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				41761AC01E38DEDE00401975 /* DataService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		41ACC3AC1E37F215008F8764 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		41ACC3B71E37F215008F8764 /* Brain Teaser */ = {
 			isa = PBXGroup;
 			children = (
+				41761ABF1E38DECA00401975 /* Service */,
 				41ACC3CA1E37F24B008F8764 /* Model */,
 				41ACC3CB1E37F251008F8764 /* View */,
 				41ACC3CC1E37F256008F8764 /* Controller */,
@@ -223,6 +234,7 @@
 				41ACC3BB1E37F215008F8764 /* ViewController.swift in Sources */,
 				41761ABE1E38DBA600401975 /* Choice.swift in Sources */,
 				41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */,
+				41761AC11E38DEDE00401975 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
