@@ -9,6 +9,16 @@
 import UIKit
 
 class GameController: UIViewController {
+    
+    @IBOutlet weak var timerLabel: UILabel?
+    @IBOutlet weak var questionNumberLabel: UILabel?
+    @IBOutlet weak var questionLabel: UILabel?
+    @IBOutlet weak var choiceButtonOne: UIButton?
+    @IBOutlet weak var choiceButtonTwo: UIButton?
+    @IBOutlet weak var choiceButtonThree: UIButton?
+    @IBOutlet weak var choiceButtonFour: UIButton?
+    @IBOutlet weak var resultFeedbackLabel: UILabel?
+    @IBOutlet weak var answerFeedbackLabel: UILabel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,20 +26,8 @@ class GameController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func choiceButtonTapped(sender: UIButton) {
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
