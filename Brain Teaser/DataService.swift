@@ -19,7 +19,7 @@ class DataService {
         self.url = bundle.url(forResource: "data", withExtension: "json")!
     }
     
-    func fetch(completion: @escaping (DataParser?) -> Void) {
+    func fetch(completion: (DataParser?) -> Void) {
         guard let data = try? Data(contentsOf: self.url) else { return }
         guard let json = try? JSONSerialization.jsonObject(with: data) as! [Any] else { return }
         let questions = DataParser(dictionary: json)

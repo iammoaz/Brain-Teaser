@@ -11,6 +11,7 @@
 		41761ABC1E38DB6700401975 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761ABB1E38DB6700401975 /* Question.swift */; };
 		41761ABE1E38DBA600401975 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761ABD1E38DBA600401975 /* Choice.swift */; };
 		41761AC11E38DEDE00401975 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC01E38DEDE00401975 /* DataService.swift */; };
+		41761AC31E38E41300401975 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC21E38E41300401975 /* Game.swift */; };
 		41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3B81E37F215008F8764 /* AppDelegate.swift */; };
 		41ACC3BB1E37F215008F8764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3BA1E37F215008F8764 /* ViewController.swift */; };
 		41ACC3BE1E37F215008F8764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41ACC3BC1E37F215008F8764 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		41761ABB1E38DB6700401975 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		41761ABD1E38DBA600401975 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		41761AC01E38DEDE00401975 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		41761AC21E38E41300401975 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		41ACC3B51E37F215008F8764 /* Brain Teaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain Teaser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41ACC3B81E37F215008F8764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41ACC3BA1E37F215008F8764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				41761ABB1E38DB6700401975 /* Question.swift */,
 				41761ABD1E38DBA600401975 /* Choice.swift */,
+				41761AC21E38E41300401975 /* Game.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41761ABC1E38DB6700401975 /* Question.swift in Sources */,
+				41761AC31E38E41300401975 /* Game.swift in Sources */,
 				41ACC3BB1E37F215008F8764 /* ViewController.swift in Sources */,
 				41761ABE1E38DBA600401975 /* Choice.swift in Sources */,
 				41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */,
