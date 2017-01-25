@@ -35,6 +35,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41761AB61E38A73E00401975 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				41ACC3B81E37F215008F8764 /* AppDelegate.swift */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		41761AB71E38A75E00401975 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				41ACC3BC1E37F215008F8764 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		41ACC3AC1E37F215008F8764 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +70,62 @@
 		41ACC3B71E37F215008F8764 /* Brain Teaser */ = {
 			isa = PBXGroup;
 			children = (
-				41ACC3B81E37F215008F8764 /* AppDelegate.swift */,
+				41ACC3CA1E37F24B008F8764 /* Model */,
+				41ACC3CB1E37F251008F8764 /* View */,
+				41ACC3CC1E37F256008F8764 /* Controller */,
+				41ACC3CF1E37F269008F8764 /* Theme */,
+				41761AB71E38A75E00401975 /* Storyboard */,
+				41ACC3CE1E37F263008F8764 /* Source */,
+				41ACC3CD1E37F25C008F8764 /* Resources */,
+			);
+			path = "Brain Teaser";
+			sourceTree = "<group>";
+		};
+		41ACC3CA1E37F24B008F8764 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		41ACC3CB1E37F251008F8764 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		41ACC3CC1E37F256008F8764 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				41ACC3BA1E37F215008F8764 /* ViewController.swift */,
-				41ACC3BC1E37F215008F8764 /* Main.storyboard */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		41ACC3CD1E37F25C008F8764 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				41ACC3BF1E37F215008F8764 /* Assets.xcassets */,
 				41ACC3C11E37F215008F8764 /* LaunchScreen.storyboard */,
 				41ACC3C41E37F215008F8764 /* Info.plist */,
 			);
-			path = "Brain Teaser";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		41ACC3CE1E37F263008F8764 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				41761AB61E38A73E00401975 /* Root */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		41ACC3CF1E37F269008F8764 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +364,7 @@
 				41ACC3C91E37F215008F8764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
