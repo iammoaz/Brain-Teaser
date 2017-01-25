@@ -76,6 +76,20 @@ class GameController: UIViewController {
         self.resultFeedbackLabel?.isHidden = true
         self.answerFeedbackLabel?.isHidden = true
     }
+    
+    func presentFeedbackLabels(to value: Bool, result: String, answer: String) {
+        self.resultFeedbackLabel?.isHidden = false
+        self.answerFeedbackLabel?.isHidden = false
+        
+        self.resultFeedbackLabel?.text = result
+        self.answerFeedbackLabel?.text = answer
+        
+        if value {
+            self.resultFeedbackLabel?.textColor = Theme.correctAnswerColor
+        } else {
+            self.resultFeedbackLabel?.textColor = Theme.wrongAnswerColor
+        }
+    }
 
     @IBAction func choiceButtonTapped(sender: UIButton) {
         
