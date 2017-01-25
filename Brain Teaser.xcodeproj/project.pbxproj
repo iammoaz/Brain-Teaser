@@ -13,6 +13,7 @@
 		41761AC11E38DEDE00401975 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC01E38DEDE00401975 /* DataService.swift */; };
 		41761AC31E38E41300401975 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC21E38E41300401975 /* Game.swift */; };
 		41761AC61E39260700401975 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC51E39260700401975 /* ThemeButton.swift */; };
+		41761AC81E39383A00401975 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761AC71E39383A00401975 /* GameController.swift */; };
 		41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3B81E37F215008F8764 /* AppDelegate.swift */; };
 		41ACC3BB1E37F215008F8764 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3BA1E37F215008F8764 /* LandingController.swift */; };
 		41ACC3BE1E37F215008F8764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41ACC3BC1E37F215008F8764 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		41761AC01E38DEDE00401975 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		41761AC21E38E41300401975 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		41761AC51E39260700401975 /* ThemeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
+		41761AC71E39383A00401975 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		41ACC3B51E37F215008F8764 /* Brain Teaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain Teaser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41ACC3B81E37F215008F8764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41ACC3BA1E37F215008F8764 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				41ACC3BA1E37F215008F8764 /* LandingController.swift */,
+				41761AC71E39383A00401975 /* GameController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				41ACC3BB1E37F215008F8764 /* LandingController.swift in Sources */,
 				41761ABE1E38DBA600401975 /* Choice.swift in Sources */,
 				41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */,
+				41761AC81E39383A00401975 /* GameController.swift in Sources */,
 				41761AC61E39260700401975 /* ThemeButton.swift in Sources */,
 				41761AC11E38DEDE00401975 /* DataService.swift in Sources */,
 			);
