@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41761ABA1E38D9D200401975 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 41761AB91E38D9D200401975 /* data.json */; };
 		41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3B81E37F215008F8764 /* AppDelegate.swift */; };
 		41ACC3BB1E37F215008F8764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC3BA1E37F215008F8764 /* ViewController.swift */; };
 		41ACC3BE1E37F215008F8764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41ACC3BC1E37F215008F8764 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41761AB91E38D9D200401975 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		41ACC3B51E37F215008F8764 /* Brain Teaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain Teaser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41ACC3B81E37F215008F8764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41ACC3BA1E37F215008F8764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 				41ACC3BC1E37F215008F8764 /* Main.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		41761AB81E38D9B900401975 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				41761AB91E38D9D200401975 /* data.json */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		41ACC3AC1E37F215008F8764 = {
@@ -116,6 +126,7 @@
 		41ACC3CE1E37F263008F8764 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				41761AB81E38D9B900401975 /* Data */,
 				41761AB61E38A73E00401975 /* Root */,
 			);
 			name = Source;
@@ -189,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41ACC3C31E37F215008F8764 /* LaunchScreen.storyboard in Resources */,
+				41761ABA1E38D9D200401975 /* data.json in Resources */,
 				41ACC3C01E37F215008F8764 /* Assets.xcassets in Resources */,
 				41ACC3BE1E37F215008F8764 /* Main.storyboard in Resources */,
 			);
