@@ -21,6 +21,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LCf-V4-J29">
+                                <rect key="frame" x="12" y="136" width="351" height="131"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain-launch-screen" translatesAutoresizingMaskIntoConstraints="NO" id="UCx-dL-KAq">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="ngp-Oa-5dA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brain Teaser" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4n-7s-A9A">
+                                        <rect key="frame" x="0.0" y="98" width="351" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="24"/>
+                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-1a-N2C">
                                 <rect key="frame" x="8" y="611" width="359" height="48"/>
                                 <subviews>
@@ -44,8 +61,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mbl-1a-N2C" secondAttribute="trailing" constant="8" id="BuR-fW-gN6"/>
+                            <constraint firstItem="LCf-V4-J29" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-132" id="CZY-rC-cYp"/>
+                            <constraint firstItem="LCf-V4-J29" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="GhT-J1-s2N"/>
+                            <constraint firstAttribute="trailing" secondItem="LCf-V4-J29" secondAttribute="trailing" constant="12" id="jGr-9p-28o"/>
                             <constraint firstItem="mbl-1a-N2C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="oHd-77-o3d"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mbl-1a-N2C" secondAttribute="bottom" constant="8" id="xvC-6q-tD2"/>
+                            <constraint firstItem="LCf-V4-J29" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ymq-iy-Aqm"/>
                         </constraints>
                     </view>
                     <connections>
@@ -68,22 +89,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RNA-q3-its" userLabel="Labels">
-                                <rect key="frame" x="12" y="80" width="351" height="85"/>
+                                <rect key="frame" x="12" y="40" width="351" height="141"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain-launch-screen" translatesAutoresizingMaskIntoConstraints="NO" id="XT0-mo-UDA">
+                                        <rect key="frame" x="134.5" y="0.0" width="82" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="nz9-Su-gFI"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-Fp-bvr">
-                                        <rect key="frame" x="154.5" y="0.0" width="42" height="20.5"/>
+                                        <rect key="frame" x="154.5" y="56" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaO-fE-off">
-                                        <rect key="frame" x="140.5" y="28.5" width="70" height="23.5"/>
+                                        <rect key="frame" x="140.5" y="84.5" width="70" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-R6-obe">
-                                        <rect key="frame" x="153.5" y="60" width="44.5" height="25"/>
+                                        <rect key="frame" x="153.5" y="116" width="44.5" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -91,7 +118,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jfG-HE-56P" userLabel="Labels">
-                                <rect key="frame" x="12" y="225" width="351" height="56.5"/>
+                                <rect key="frame" x="12" y="241" width="351" height="56.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gG5-9u-kQT">
                                         <rect key="frame" x="0.0" y="0.0" width="351" height="26.5"/>
@@ -180,7 +207,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="076-NJ-eu6" secondAttribute="trailing" constant="8" id="3Wo-z5-Z8v"/>
                             <constraint firstItem="Jfj-Ok-Pou" firstAttribute="top" secondItem="076-NJ-eu6" secondAttribute="bottom" constant="8" id="9ck-Qo-W3O"/>
-                            <constraint firstItem="RNA-q3-its" firstAttribute="top" secondItem="OCx-Zd-iKQ" secondAttribute="bottom" constant="60" id="BQX-nw-cQe"/>
+                            <constraint firstItem="RNA-q3-its" firstAttribute="top" secondItem="OCx-Zd-iKQ" secondAttribute="bottom" constant="20" id="BQX-nw-cQe"/>
                             <constraint firstItem="jfG-HE-56P" firstAttribute="leading" secondItem="4au-2j-5LE" secondAttribute="leading" constant="12" id="Eq2-aK-hq8"/>
                             <constraint firstItem="076-NJ-eu6" firstAttribute="leading" secondItem="4au-2j-5LE" secondAttribute="leading" constant="8" id="PxR-z0-xQr"/>
                             <constraint firstItem="jfG-HE-56P" firstAttribute="top" secondItem="RNA-q3-its" secondAttribute="bottom" constant="60" id="mfS-3u-sgG"/>
@@ -206,4 +233,7 @@
             <point key="canvasLocation" x="870" y="38"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="brain-launch-screen" width="82" height="88"/>
+    </resources>
 </document>
