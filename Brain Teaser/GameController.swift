@@ -55,26 +55,30 @@ class GameController: UIViewController {
         
         if question.choices.indices.contains(0), let firstChoice = question.choices[question.choices.startIndex] {
             self.choiceButtonOne?.setTitle(firstChoice.choice, for: .normal)
+            self.choiceButtonOne?.isHidden = false
         } else {
-            self.choiceButtonOne?.isEnabled = false
+            self.choiceButtonOne?.isHidden = true
         }
         
         if question.choices.indices.contains(1), let secondChoice = question.choices[question.choices.startIndex + 1] {
             self.choiceButtonTwo?.setTitle(secondChoice.choice, for: .normal)
+            self.choiceButtonTwo?.isHidden = false
         } else {
-            self.choiceButtonTwo?.isEnabled = false
+            self.choiceButtonTwo?.isHidden = true
         }
         
         if question.choices.indices.contains(2), let thirdChoice = question.choices[question.choices.startIndex + 2] {
             self.choiceButtonThree?.setTitle(thirdChoice.choice, for: .normal)
+            self.choiceButtonThree?.isHidden = false
         } else {
-            self.choiceButtonThree?.isEnabled = false
+            self.choiceButtonThree?.isHidden = true
         }
         
         if question.choices.indices.contains(3), let forthChoice = question.choices[question.choices.startIndex + 3] {
             self.choiceButtonFour?.setTitle(forthChoice.choice, for: .normal)
+            self.choiceButtonFour?.isHidden = false
         } else {
-            self.choiceButtonFour?.isEnabled = false
+            self.choiceButtonFour?.isHidden = true
         }
     }
     
