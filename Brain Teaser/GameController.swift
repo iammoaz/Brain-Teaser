@@ -21,6 +21,7 @@ class GameController: UIViewController {
     @IBOutlet weak var answerFeedbackLabel: UILabel?
     
     private var game = Game()
+    private var sound = Sound()
     private var currentQuestionNumber: Int = 0 {
         didSet {
             configureView()
@@ -32,6 +33,7 @@ class GameController: UIViewController {
 
         // Do any additional setup after loading the view.
         currentQuestionNumber = 0
+        sound.playStartSound()
     }
     
     func configureView() {
@@ -145,8 +147,10 @@ class GameController: UIViewController {
         toggleChoiceButtons(value: false)
         game.checkAnswer(for: title, at: currentQuestionNumber) { (success: Bool, correct:Choice) in
             if success {
+                self.sound.playCorrectSound()
                 self.presentFeedbackLabels(to: success, result: "Correct", answer: "Good Job")
             } else {
+                self.sound.playIncorrectSound()
                 self.presentFeedbackLabels(to: success, result: "Wrong", answer: "The Correct Answer is \(correct.choice!)")
             }
         }
@@ -154,7 +158,7 @@ class GameController: UIViewController {
         if currentQuestionNumber + 1 == game.questions.count {
             configureViewToDisplayFinalResult()
         } else if currentQuestionNumber + 1 < game.questions.count {
-            loadNextRoundWithDelay(seconds: 1)
+            loadNextRoundWithDelay(seconds: 2)
         }
     }
 
