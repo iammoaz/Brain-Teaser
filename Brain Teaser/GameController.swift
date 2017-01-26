@@ -98,6 +98,19 @@ class GameController: UIViewController {
         self.choiceButtonFour?.isEnabled = value
     }
     
+    func hideChoiceButtons() {
+        self.choiceButtonOne?.isHidden = true
+        self.choiceButtonTwo?.isHidden = true
+        self.choiceButtonThree?.isHidden = true
+        self.choiceButtonFour?.isHidden = true
+    }
+    
+    func hideLabels() {
+        self.timerLabel?.isHidden = true
+        self.questionNumberLabel?.isHidden = true
+        self.questionLabel?.isHidden = true
+    }
+    
     func loadNextRoundWithDelay(seconds: Int) {
         // Converts a delay in seconds to nanoseconds as signed 64 bit integer
         let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
@@ -111,16 +124,19 @@ class GameController: UIViewController {
     }
     
     func configureViewToDisplayFinalResult() {
-        toggleChoiceButtons(value: false)
+        hideLabels()
+        hideChoiceButtons()
         
         let totalNumberOfQuestions = game.questions.count
         let numberOfCorrectlyAnsweredQuestions = game.correctlyAnweredQuestions.count
         let numberOfWronglyAnsweredQuestions = game.wronglyAnweredQuestions.count
         
         if numberOfCorrectlyAnsweredQuestions > numberOfWronglyAnsweredQuestions {
-            presentFeedbackLabels(to: true, result: "Congratulations", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions)")
+            presentFeedbackLabels(to: true, result: "Congratulations", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         } else if numberOfCorrectlyAnsweredQuestions < numberOfWronglyAnsweredQuestions {
-            presentFeedbackLabels(to: true, result: "Better Luck Next Time", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions)")
+            presentFeedbackLabels(to: false, result: "Better Luck Next Time", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
+        } else {
+            presentFeedbackLabels(to: true, result: "There is a tie", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         }
     }
 
@@ -135,7 +151,11 @@ class GameController: UIViewController {
             }
         }
         
-        loadNextRoundWithDelay(seconds: 3)
+        if currentQuestionNumber + 1 == game.questions.count {
+            configureViewToDisplayFinalResult()
+        } else if currentQuestionNumber + 1 < game.questions.count {
+            loadNextRoundWithDelay(seconds: 1)
+        }
     }
 
 }
