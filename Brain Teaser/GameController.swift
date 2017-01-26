@@ -109,6 +109,20 @@ class GameController: UIViewController {
             self.currentQuestionNumber += 1
         }
     }
+    
+    func configureViewToDisplayFinalResult() {
+        toggleChoiceButtons(value: false)
+        
+        let totalNumberOfQuestions = game.questions.count
+        let numberOfCorrectlyAnsweredQuestions = game.correctlyAnweredQuestions.count
+        let numberOfWronglyAnsweredQuestions = game.wronglyAnweredQuestions.count
+        
+        if numberOfCorrectlyAnsweredQuestions > numberOfWronglyAnsweredQuestions {
+            presentFeedbackLabels(to: true, result: "Congratulations", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions)")
+        } else if numberOfCorrectlyAnsweredQuestions < numberOfWronglyAnsweredQuestions {
+            presentFeedbackLabels(to: true, result: "Better Luck Next Time", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions)")
+        }
+    }
 
     @IBAction func choiceButtonTapped(sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
