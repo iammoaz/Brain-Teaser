@@ -36,6 +36,7 @@ class GameController: UIViewController {
     
     func configureView() {
         hideFeedbackLabels()
+        toggleChoiceButtons(value: true)
         questionNumberLabel?.text = "Question \(currentQuestionNumber + 1) of \(game.questions.count)"
         
         let question = game.questions[currentQuestionNumber]
@@ -89,10 +90,17 @@ class GameController: UIViewController {
             self.resultFeedbackLabel?.textColor = Theme.wrongAnswerColor
         }
     }
+    
+    func toggleChoiceButtons(value: Bool) {
+        self.choiceButtonOne?.isEnabled = value
+        self.choiceButtonTwo?.isEnabled = value
+        self.choiceButtonThree?.isEnabled = value
+        self.choiceButtonFour?.isEnabled = value
+    }
 
     @IBAction func choiceButtonTapped(sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
-        
+        toggleChoiceButtons(value: false)
         game.checkAnswer(for: title, at: currentQuestionNumber) { (success: Bool, correct:Choice) in
             if success {
                 self.presentFeedbackLabels(to: success, result: "Correct", answer: "Good Job")

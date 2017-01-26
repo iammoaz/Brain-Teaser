@@ -40,8 +40,10 @@ struct Game {
         }
         
         if usersChoice! == correctChoice! {
+            self.correctlyAnweredQuestions.append(question)
             completion(true, correctChoice!!)
         } else {
+            self.correctlyAnweredQuestions.append(question)
             completion(false, correctChoice!!)
         }
     }
