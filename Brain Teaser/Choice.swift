@@ -26,6 +26,11 @@ struct Choice {
             self.isCorrect = isCorrect
         }
     }
-    
-    
+}
+
+extension Choice: Equatable {
+    static func == (lhs: Choice, rhs: Choice) -> Bool {
+        return lhs.id == rhs.id && lhs.choice == rhs.choice
+            && lhs.isCorrect == rhs.isCorrect
+    }
 }

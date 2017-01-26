@@ -41,7 +41,6 @@ class GameController: UIViewController {
         let question = game.questions[currentQuestionNumber]
         self.questionLabel?.text = question.question!
         configureChoicesButton(for: question.choices.count)
-        
     }
     
     func configureChoicesButton(for value: Int) {
@@ -92,6 +91,15 @@ class GameController: UIViewController {
     }
 
     @IBAction func choiceButtonTapped(sender: UIButton) {
+        guard let title = sender.titleLabel?.text else { return }
+        
+        game.checkAnswer(for: title, at: currentQuestionNumber) { (success: Bool, correct:Choice) in
+            if success {
+                self.presentFeedbackLabels(to: success, result: "Correct", answer: "Good Job")
+            } else {
+                self.presentFeedbackLabels(to: success, result: "Wrong", answer: "The Correct Answer is \(correct.choice!)")
+            }
+        }
         
     }
 
