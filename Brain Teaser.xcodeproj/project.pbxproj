@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411D01401E39F67B00DEB6E8 /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 411D013E1E39F67B00DEB6E8 /* Correct.wav */; };
+		411D01411E39F67B00DEB6E8 /* Wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 411D013F1E39F67B00DEB6E8 /* Wrong.wav */; };
+		411D01431E39F69A00DEB6E8 /* Introduction.wav in Resources */ = {isa = PBXBuildFile; fileRef = 411D01421E39F69A00DEB6E8 /* Introduction.wav */; };
 		41761ABA1E38D9D200401975 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 41761AB91E38D9D200401975 /* data.json */; };
 		41761ABC1E38DB6700401975 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761ABB1E38DB6700401975 /* Question.swift */; };
 		41761ABE1E38DBA600401975 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761ABD1E38DBA600401975 /* Choice.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		411D013E1E39F67B00DEB6E8 /* Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Correct.wav; sourceTree = "<group>"; };
+		411D013F1E39F67B00DEB6E8 /* Wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wrong.wav; sourceTree = "<group>"; };
+		411D01421E39F69A00DEB6E8 /* Introduction.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Introduction.wav; sourceTree = "<group>"; };
 		41761AB91E38D9D200401975 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		41761ABB1E38DB6700401975 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		41761ABD1E38DBA600401975 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
@@ -51,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		411D013D1E39F64F00DEB6E8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				411D01421E39F69A00DEB6E8 /* Introduction.wav */,
+				411D013E1E39F67B00DEB6E8 /* Correct.wav */,
+				411D013F1E39F67B00DEB6E8 /* Wrong.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		41761AB61E38A73E00401975 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +175,7 @@
 		41ACC3CD1E37F25C008F8764 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				411D013D1E39F64F00DEB6E8 /* Sounds */,
 				41ACC3BF1E37F215008F8764 /* Assets.xcassets */,
 				41ACC3C11E37F215008F8764 /* LaunchScreen.storyboard */,
 				41ACC3C41E37F215008F8764 /* Info.plist */,
@@ -246,7 +263,10 @@
 			files = (
 				41ACC3C31E37F215008F8764 /* LaunchScreen.storyboard in Resources */,
 				41761ABA1E38D9D200401975 /* data.json in Resources */,
+				411D01411E39F67B00DEB6E8 /* Wrong.wav in Resources */,
 				41ACC3C01E37F215008F8764 /* Assets.xcassets in Resources */,
+				411D01401E39F67B00DEB6E8 /* Correct.wav in Resources */,
+				411D01431E39F69A00DEB6E8 /* Introduction.wav in Resources */,
 				41ACC3BE1E37F215008F8764 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
