@@ -10,6 +10,7 @@ import UIKit
 
 class GameController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet weak var timerLabel: UILabel?
     @IBOutlet weak var questionNumberLabel: UILabel?
     @IBOutlet weak var questionLabel: UILabel?
@@ -20,9 +21,9 @@ class GameController: UIViewController {
     @IBOutlet weak var resultFeedbackLabel: UILabel?
     @IBOutlet weak var answerFeedbackLabel: UILabel?
     
+    // MARK: Variables
     private var timer: Timer?
     private var timerCount: Int = 15
-    
     private var game = Game()
     private var sound = Sound()
     private var currentQuestionNumber: Int = 0 {
@@ -35,11 +36,11 @@ class GameController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         currentQuestionNumber = 0
         sound.playStartSound()
     }
     
+    // MARK: View Configuration
     func configureView() {
         hideFeedbackLabels()
         toggleChoiceButtons(value: true)
@@ -121,15 +122,6 @@ class GameController: UIViewController {
         self.questionLabel?.isHidden = true
     }
     
-    func loadNextRoundWithDelay(seconds: Int) {
-        let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
-        let dispatchTime = DispatchTime.now() + Double(delay) / Double(NSEC_PER_SEC)
-        
-        DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
-            self.currentQuestionNumber += 1
-        }
-    }
-    
     func configureViewToDisplayFinalResult() {
         hideLabels()
         hideChoiceButtons()
@@ -145,15 +137,26 @@ class GameController: UIViewController {
         }
         
         if numberOfCorrectlyAnsweredQuestions > numberOfWronglyAnsweredQuestions {
-            presentFeedbackLabels(to: true, result: "Congratulations", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
+            presentFeedbackLabels(to: true, result: "Congratulations!", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         } else if numberOfCorrectlyAnsweredQuestions < numberOfWronglyAnsweredQuestions {
-            presentFeedbackLabels(to: false, result: "Better Luck Next Time", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
+            presentFeedbackLabels(to: false, result: "Better Luck Next Time!", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         } else {
-            presentFeedbackLabels(to: true, result: "There is a tie", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
+            presentFeedbackLabels(to: true, result: "It's a tie!", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         }
         
         dismissController()
     }
+    
+    // MARK: Helper Functions
+    func loadNextRoundWithDelay(seconds: Int) {
+        let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
+        let dispatchTime = DispatchTime.now() + Double(delay) / Double(NSEC_PER_SEC)
+        
+        DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
+            self.currentQuestionNumber += 1
+        }
+    }
+    
     
     func startTimer() {
         timerCount = 15
@@ -191,7 +194,8 @@ class GameController: UIViewController {
         }
     }
     
-
+    
+    // MARK: Actions
     @IBAction func choiceButtonTapped(sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
         toggleChoiceButtons(value: false)
@@ -199,10 +203,10 @@ class GameController: UIViewController {
         game.checkAnswer(for: title, at: currentQuestionNumber) { (success: Bool, correct:Choice) in
             if success {
                 self.sound.playCorrectSound()
-                self.presentFeedbackLabels(to: success, result: "Correct", answer: "Good Job")
+                self.presentFeedbackLabels(to: success, result: "Correct!", answer: "Good Job!")
             } else {
                 self.sound.playIncorrectSound()
-                self.presentFeedbackLabels(to: success, result: "Wrong", answer: "The Correct Answer is \(correct.choice!)")
+                self.presentFeedbackLabels(to: success, result: "Wrong!", answer: "The Correct Answer is \(correct.choice!)")
             }
         }
         
