@@ -43,7 +43,7 @@ struct Game {
             self.correctlyAnweredQuestions.append(question)
             completion(true, correctChoice!!)
         } else {
-            self.correctlyAnweredQuestions.append(question)
+            self.wronglyAnweredQuestions.append(question)
             completion(false, correctChoice!!)
         }
     }
