@@ -47,5 +47,4 @@ struct Game {
             completion(false, correctChoice!!)
         }
     }
-    
 }

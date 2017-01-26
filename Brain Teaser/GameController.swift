@@ -20,10 +20,14 @@ class GameController: UIViewController {
     @IBOutlet weak var resultFeedbackLabel: UILabel?
     @IBOutlet weak var answerFeedbackLabel: UILabel?
     
+    private var timer: Timer?
+    private var timerCount: Int = 15
+    
     private var game = Game()
     private var sound = Sound()
     private var currentQuestionNumber: Int = 0 {
         didSet {
+            startTimer()
             configureView()
         }
     }
@@ -130,6 +134,12 @@ class GameController: UIViewController {
         let numberOfCorrectlyAnsweredQuestions = game.correctlyAnweredQuestions.count
         let numberOfWronglyAnsweredQuestions = game.wronglyAnweredQuestions.count
         
+        guard timer != nil else {
+            presentFeedbackLabels(to: false, result: "Oops..Times Up!", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
+            dismissController()
+            return
+        }
+        
         if numberOfCorrectlyAnsweredQuestions > numberOfWronglyAnsweredQuestions {
             presentFeedbackLabels(to: true, result: "Congratulations", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         } else if numberOfCorrectlyAnsweredQuestions < numberOfWronglyAnsweredQuestions {
@@ -138,14 +148,50 @@ class GameController: UIViewController {
             presentFeedbackLabels(to: true, result: "There is a tie", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         }
         
+        dismissController()
+    }
+    
+    func startTimer() {
+        timerCount = 15
+        timerLabel?.text = "\(timerCount)"
+        guard timer == nil else { return }
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimerLabel), userInfo: nil, repeats: true)
+    }
+    
+    func stopTimer() {
+        guard timer != nil else { return }
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    @objc func updateTimerLabel() {
+        if timerCount > 0 {
+            timerCount -= 1
+            self.timerLabel?.text = "\(timerCount)"
+        } else if timerCount == 0 {
+            stopTimer()
+            configureViewToDisplayFinalResult()
+            sound.playIncorrectSound()
+        }
+        
+        if timerCount > 5 {
+            timerLabel?.textColor = Theme.correctAnswerColor
+        } else {
+            timerLabel?.textColor = Theme.wrongAnswerColor
+        }
+    }
+    
+    func dismissController() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             self.dismiss(animated: true, completion: nil)
         }
     }
+    
 
     @IBAction func choiceButtonTapped(sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
         toggleChoiceButtons(value: false)
+        stopTimer()
         game.checkAnswer(for: title, at: currentQuestionNumber) { (success: Bool, correct:Choice) in
             if success {
                 self.sound.playCorrectSound()
