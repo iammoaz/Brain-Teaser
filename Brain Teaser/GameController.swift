@@ -114,12 +114,9 @@ class GameController: UIViewController {
     }
     
     func loadNextRoundWithDelay(seconds: Int) {
-        // Converts a delay in seconds to nanoseconds as signed 64 bit integer
         let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
-        // Calculates a time value to execute the method given current time and delay
         let dispatchTime = DispatchTime.now() + Double(delay) / Double(NSEC_PER_SEC)
         
-        // Executes the nextRound method at the dispatch time on the main queue
         DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
             self.currentQuestionNumber += 1
         }
@@ -139,6 +136,10 @@ class GameController: UIViewController {
             presentFeedbackLabels(to: false, result: "Better Luck Next Time", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         } else {
             presentFeedbackLabels(to: true, result: "There is a tie", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            self.dismiss(animated: true, completion: nil)
         }
     }
 
@@ -161,5 +162,4 @@ class GameController: UIViewController {
             loadNextRoundWithDelay(seconds: 2)
         }
     }
-
 }
