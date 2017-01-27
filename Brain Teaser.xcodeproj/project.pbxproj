@@ -11,6 +11,7 @@
 		411D01411E39F67B00DEB6E8 /* Incorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 411D013F1E39F67B00DEB6E8 /* Incorrect.wav */; };
 		411D01431E39F69A00DEB6E8 /* Introduction.wav in Resources */ = {isa = PBXBuildFile; fileRef = 411D01421E39F69A00DEB6E8 /* Introduction.wav */; };
 		411D01451E39F6DE00DEB6E8 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D01441E39F6DE00DEB6E8 /* Sound.swift */; };
+		4163FB331E3BCF4A008DA73B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4163FB321E3BCF4A008DA73B /* Extensions.swift */; };
 		41761ABA1E38D9D200401975 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 41761AB91E38D9D200401975 /* data.json */; };
 		41761ABC1E38DB6700401975 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761ABB1E38DB6700401975 /* Question.swift */; };
 		41761ABE1E38DBA600401975 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41761ABD1E38DBA600401975 /* Choice.swift */; };
@@ -31,6 +32,7 @@
 		411D013F1E39F67B00DEB6E8 /* Incorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Incorrect.wav; sourceTree = "<group>"; };
 		411D01421E39F69A00DEB6E8 /* Introduction.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Introduction.wav; sourceTree = "<group>"; };
 		411D01441E39F6DE00DEB6E8 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		4163FB321E3BCF4A008DA73B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		41761AB91E38D9D200401975 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		41761ABB1E38DB6700401975 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		41761ABD1E38DBA600401975 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 				411D013F1E39F67B00DEB6E8 /* Incorrect.wav */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		4163FB311E3BCF2F008DA73B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4163FB321E3BCF4A008DA73B /* Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		41761AB61E38A73E00401975 /* Root */ = {
@@ -136,6 +146,7 @@
 		41ACC3B71E37F215008F8764 /* Brain Teaser */ = {
 			isa = PBXGroup;
 			children = (
+				4163FB311E3BCF2F008DA73B /* Extensions */,
 				41761ABF1E38DECA00401975 /* Service */,
 				41ACC3CA1E37F24B008F8764 /* Model */,
 				41ACC3CB1E37F251008F8764 /* View */,
@@ -290,6 +301,7 @@
 				41ACC3B91E37F215008F8764 /* AppDelegate.swift in Sources */,
 				41761AC81E39383A00401975 /* GameController.swift in Sources */,
 				41761AC61E39260700401975 /* ThemeButton.swift in Sources */,
+				4163FB331E3BCF4A008DA73B /* Extensions.swift in Sources */,
 				41761AC11E38DEDE00401975 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

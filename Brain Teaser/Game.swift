@@ -23,6 +23,7 @@ struct Game {
                 for question in objects.questions {
                     self.questions.append(question)
                 }
+                self.questions.shuffle()
             }
         }
     }

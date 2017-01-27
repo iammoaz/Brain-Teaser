@@ -27,6 +27,7 @@ struct Question {
                 let choice = Choice(dictionary: object as! [String: AnyObject])
                 self.choices.append(choice)
             }
+            self.choices.shuffle()
         }
     }
 }
