@@ -130,18 +130,28 @@ class GameController: UIViewController {
         let numberOfCorrectlyAnsweredQuestions = game.correctlyAnweredQuestions.count
         let numberOfWronglyAnsweredQuestions = game.wronglyAnweredQuestions.count
         
-        guard timer != nil else {
-            presentFeedbackLabels(to: false, result: "Oops..Times Up!", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
-            dismissController()
-            return
-        }
-        
         if numberOfCorrectlyAnsweredQuestions > numberOfWronglyAnsweredQuestions {
             presentFeedbackLabels(to: true, result: "Congratulations!", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         } else if numberOfCorrectlyAnsweredQuestions < numberOfWronglyAnsweredQuestions {
             presentFeedbackLabels(to: false, result: "Better Luck Next Time!", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
         } else {
             presentFeedbackLabels(to: true, result: "It's a tie!", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
+        }
+        
+        dismissController()
+    }
+    
+    func configureViewOnTimeUp() {
+        hideLabels()
+        hideChoiceButtons()
+        
+        let totalNumberOfQuestions = game.questions.count
+        let numberOfCorrectlyAnsweredQuestions = game.correctlyAnweredQuestions.count
+        
+        guard timer != nil else {
+            presentFeedbackLabels(to: false, result: "Oops..Times Up!", answer: "You answered \(numberOfCorrectlyAnsweredQuestions) out of \(totalNumberOfQuestions) questions correctly")
+            dismissController()
+            return
         }
         
         dismissController()
@@ -177,7 +187,7 @@ class GameController: UIViewController {
             self.timerLabel?.text = "\(timerCount)"
         } else if timerCount == 0 {
             stopTimer()
-            configureViewToDisplayFinalResult()
+            configureViewOnTimeUp()
             sound.playIncorrectSound()
         }
         
